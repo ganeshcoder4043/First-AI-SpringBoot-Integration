@@ -17,9 +17,9 @@ public class ChatController {
         this.chatClient = builder.build();
     }
 
+                         /* http://localhost:8080/api/ask?message=Hello */
 
-
-   /* @GetMapping("/ask")
+   @GetMapping("/ask")
     public String askAI(@RequestParam String message) {
         return chatClient.prompt()
                 .system("""
@@ -46,7 +46,7 @@ public class ChatController {
                 .user(message)
                 .call()
                 .content();
-    }*/
+    }
 
 
                 /* Multiple Response Formats: */
@@ -84,7 +84,7 @@ public class ChatController {
     }*/
 
                         /* Multiple Topics Support: */
-    @GetMapping("/ask")
+   /* @GetMapping("/ask")
     public ResponseEntity<?> askAI(@RequestParam String message,
                                    @RequestParam(defaultValue = "simple") String format) {
 
@@ -115,6 +115,6 @@ public class ChatController {
                 .content();
 
         return ResponseEntity.ok(response);
-    }
+    }*/
 
 }
